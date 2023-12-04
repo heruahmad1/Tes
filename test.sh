@@ -32,11 +32,4 @@ read -rp "Choose Your script : " sc
 case $opt in
 1) clear ; teso ;;
 2) clear ; jjg ;;
-if test $sc -eq 1; then
-clear
-wget -q https://raw.githubusercontent.com/sasak3/v4/main/setup.sh;chmod +x setup.sh;./setup.sh
-rm setup.sh
-clear
-elif test $dom -eq 2; then
-echo -e zoooonk"
 #clear
