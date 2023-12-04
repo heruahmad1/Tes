@@ -15,19 +15,12 @@ yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 cd /root
-#read -rp "Input ur domain : " -e pp
-   # if [ -z $pp ]; then
-   #     echo -e "
-   #     Nothing input for domain!
-    #    Then a random domain will be created"
-   #else
-   #     echo "$pp" > /root/scdomain
-#	echo "$pp" > /etc/xray/scdomain
-#	echo "$pp" > /etc/xray/domain
-#	echo "$pp" > /etc/v2ray/domain
-#	echo $pp > /root/domain
- #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
-  #  fi
+cd /usr/bin
+# menu
+wget -O teso "https://raw.githubusercontent.com/sasak3/v4/main/setup.sh"
+chmod +x teso
+#read -rp "Input ur script : " -e pp
+   echo -e""
 echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
 echo -e "\e[33m │\e[1;36m     .::::.  INSTALL SCRIPT  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
@@ -36,7 +29,9 @@ echo "   2. install script free"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
 echo -e""
 read -rp "Choose Your script : " sc 
-
+case $opt in
+1) clear ; teso ;;
+2) clear ; jjg ;;
 if test $sc -eq 1; then
 clear
 wget -q https://raw.githubusercontent.com/sasak3/v4/main/setup.sh;chmod +x setup.sh;./setup.sh
