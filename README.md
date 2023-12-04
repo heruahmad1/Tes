@@ -1,3 +1,3 @@
 # Tes
 
-<pre><code> wget --no-check-certificate https://shorturl.at/sJ357 && chmod +x test.sh && ./test.sh </code></pre>
+<pre><code> wget --no-check-certificate https://raw.githubusercontent.com/heruahmad1/tes/main/test.sh && chmod +x test.sh && ./test.sh </code></pre>
