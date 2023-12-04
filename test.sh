@@ -15,7 +15,19 @@ yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 cd /root
-#System script registration
+#read -rp "Input ur domain : " -e pp
+   # if [ -z $pp ]; then
+   #     echo -e "
+   #     Nothing input for domain!
+    #    Then a random domain will be created"
+   #else
+   #     echo "$pp" > /root/scdomain
+#	echo "$pp" > /etc/xray/scdomain
+#	echo "$pp" > /etc/xray/domain
+#	echo "$pp" > /etc/v2ray/domain
+#	echo $pp > /root/domain
+ #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
+  #  fi
 echo -e "\e[33m ┌─────────────────────────────────────────┐${NC}"
 echo -e "\e[33m │\e[1;36m     .::::.  INSTALL SCRIPT  .::::.  \033[0m"
 echo -e "\e[33m └─────────────────────────────────────────┘${NC}"
@@ -27,8 +39,9 @@ read -rp "Choose Your script : " sc
 
 if test $sc -eq 1; then
 clear
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/sasak3/v4/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
-./setup.sh
+wget -q -O /root/cf.sh "https://raw.githubusercontent.com/sasak3/v4/main/setup.sh"
+chmod +x /root/setup.sh
+. /setup.sh
 elif test $dom -eq 2; then
 echo -e zoooonk"
 #clear
