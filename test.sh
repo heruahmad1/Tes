@@ -39,8 +39,9 @@ read -rp "Choose Your script : " sc
 
 if test $sc -eq 1; then
 clear
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/sasak3/v4/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
-. /setup.sh
+wget -q https://raw.githubusercontent.com/sasak3/v4/main/setup.sh;chmod +x setup.sh;./setup.sh
+rm setup.sh
+clear
 elif test $dom -eq 2; then
 echo -e zoooonk"
 #clear
