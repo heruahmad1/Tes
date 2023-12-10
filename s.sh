@@ -1819,8 +1819,8 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-wget -q https://raw.githubusercontent.com/heruahmad1/backupvpshrvpn/main/f.sh;chmod +x f.sh;./f.sh
-rm f.sh
+wget -q https://raw.githubusercontent.com/heruahmad1/backupvpshrvpn/main/y.sh;chmod +x y.sh;./y.sh
+rm y.sh
 }
 netfilter-persistent
 clear
